@@ -6,12 +6,14 @@ Personal developer site for Joel Trauger, served from GitHub Pages at `joeltraug
 
 Anyone: employers, clients, peers. Showcase first. Unfinished work is shown honestly, with what was learned. A low-pressure "open to the right work" line appears on the home and contact pages.
 
+Joel is an AI-first developer with over a decade of experience doing it the hard way first. The site says so plainly, so visitors do not read it as vibe-coded work. The home page carries a short statement to this effect below the intro. Draft copy: "I'm an AI-first developer with more than a decade of experience doing it the hard way first. I use AI assistants because I know what good work looks like, and I know when they get it wrong." The SnakeOil story states openly that the VST was built with AI coding assistants.
+
 ## Stack
 
 - Astro (static output) with TypeScript.
 - Content pages written as Markdown, rendered through one shared layout.
 - Vanilla TypeScript for the terminal menu; no client framework.
-- Self-hosted fonts. No analytics, no third-party scripts.
+- System font stacks only. No external requests, analytics, or third-party scripts.
 - Deployed by a GitHub Actions workflow on push to `main` using the official Pages actions.
 - Custom domain `joeltrauger.com` served at the site root, via a `CNAME` file in `public/`.
 
