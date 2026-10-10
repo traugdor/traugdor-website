@@ -1,0 +1,41 @@
+---
+import '../styles/global.css';
+import Terminal from '../components/Terminal.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Slim terminal bar under the header. The home page shows the large terminal instead. */
+  slimTerminal?: boolean;
+}
+
+const { title, description, slimTerminal = true } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <a href="/">Joel Trauger</a>
+        <span>Developer</span>
+      </header>
+      {slimTerminal && <Terminal variant="slim" />}
+      <slot />
+      <footer class="site-footer">
+        <span>&copy; Joel Trauger</span>
+        <span>
+          <a href="https://github.com/traugdor">See all repositories on GitHub</a>
+          &nbsp;·&nbsp;
+          <a href="/contact">Contact</a>
+        </span>
+      </footer>
+    </div>
+  </body>
+</html>
