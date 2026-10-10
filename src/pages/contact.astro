@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+import { GITHUB_URL } from '../lib/routes';
+---
+
+<Base title="Contact — Joel Trauger" description="Get in touch with Joel Trauger.">
+  <main class="contact-page">
+    <div class="eyebrow">Contact</div>
+    <h1>Say hello</h1>
+    <div class="prose">
+      <p>I'm not actively looking for work, but I'm open to the right offer, whether that's a full-time role or side work that pays well enough.</p>
+      <p>
+        <button class="reveal" type="button" data-reveal-email hidden>Reveal email address</button>
+        <span data-email-target></span>
+        <noscript>Email is revealed with JavaScript. Without it, reach me through <a href={GITHUB_URL}>my GitHub profile</a>.</noscript>
+      </p>
+      <p>The rest of my work is on <a href={GITHUB_URL}>GitHub</a>.</p>
+    </div>
+  </main>
+</Base>
+
+<script>
+  import '../scripts/reveal-email';
+</script>

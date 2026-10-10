@@ -1,0 +1,45 @@
+---
+import Base from '../layouts/Base.astro';
+import Terminal from '../components/Terminal.astro';
+import { projectRoutes } from '../lib/routes';
+---
+
+<Base
+  title="Joel Trauger — Developer"
+  description="Joel Trauger's projects: an operating system, a synthesizer, game mods, ComfyUI nodes, and research."
+  slimTerminal={false}
+>
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Developer · Tinkerer</div>
+        <h1>I build things to find out how they work.</h1>
+        <p>An operating system, a synthesizer, game mods, and a few experiments in math. Some of it is finished. All of it taught me something.</p>
+        <div class="cta">
+          <a href="/santos">Start with SantOS &rarr;</a>
+          <small>Open to the right work.</small>
+        </div>
+      </div>
+      <Terminal variant="big" />
+    </section>
+
+    <p class="how-i-work">
+      I'm an AI-first developer with more than a decade of experience doing it the hard way first. I use AI
+      assistants because I know what good work looks like, and I know when they get it wrong.
+    </p>
+
+    <h2 class="section-label">Projects</h2>
+    <nav class="project-list" aria-label="Projects">
+      {
+        projectRoutes.map((route, i) => (
+          <a href={route.path}>
+            <span class="n">{String(i + 1).padStart(2, '0')}</span>
+            <span class="t">{route.title}</span>
+            <span class="d">{route.blurb}</span>
+            <span class="ar">&rarr;</span>
+          </a>
+        ))
+      }
+    </nav>
+  </main>
+</Base>
