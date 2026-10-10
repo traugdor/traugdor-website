@@ -10,6 +10,7 @@ if (button && target) {
     link.href = mailtoHref();
     link.textContent = assembleAddress();
     target.replaceChildren(link);
+    link.focus();
     button.hidden = true;
   });
 }

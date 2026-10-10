@@ -1,7 +1,8 @@
 :root {
+  color-scheme: light dark;
   --bg: #faf8f4;
   --fg: #1c1b19;
-  --muted: #7a756b;
+  --muted: #6b665c;
   --rule: #e2ddd2;
   --serif: Georgia, 'Times New Roman', serif;
   --sans: system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -134,7 +135,8 @@ a { color: inherit; }
   padding: 0;
 }
 .term-log { white-space: pre-wrap; color: #d8ffe3; }
-.term-log:empty { display: none; }
+.term .term-log:empty, .term-big .term-log:empty { margin: 0; }
+.term-slim .term-log:empty { flex-basis: 0; margin: 0 0 0 -18px; }
 
 .term-big { box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2); }
 .term-big .term-bar {

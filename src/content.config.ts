@@ -8,7 +8,7 @@ const projects = defineCollection({
     pitch: z.string(),
     status: z.string(),
     tech: z.array(z.string()),
-    repos: z.array(z.object({ label: z.string(), url: z.string().url() })),
+    repos: z.array(z.object({ label: z.string(), url: z.url() })),
   }),
 });
 
