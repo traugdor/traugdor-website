@@ -1,0 +1,46 @@
+---
+import Base from './Base.astro';
+import { allRoutes, type Route } from '../lib/routes';
+
+interface Props {
+  route: Route;
+  index: number;
+  pitch: string;
+  status: string;
+  tech: string[];
+  repos: { label: string; url: string }[];
+}
+
+const { route, index, pitch, status, tech, repos } = Astro.props;
+const next = allRoutes[allRoutes.findIndex((r) => r.name === route.name) + 1];
+const number = String(index + 1).padStart(2, '0');
+---
+
+<Base title={`${route.title} — Joel Trauger`} description={pitch}>
+  <main class="project-page">
+    <header>
+      <div class="eyebrow">{number} · Project</div>
+      <h1>{route.title}</h1>
+      <p class="pitch">{pitch}</p>
+    </header>
+    <div class="project-cols">
+      <div class="prose"><slot /></div>
+      <aside class="glance">
+        <h2>At a glance</h2>
+        <dl>
+          <dt>Built with</dt>
+          <dd>{tech.join(', ')}</dd>
+          <dt>Status</dt>
+          <dd>{status}</dd>
+          <dt>Source</dt>
+          <dd>
+            <ul>
+              {repos.map((repo) => <li><a href={repo.url}>{repo.label}</a></li>)}
+            </ul>
+          </dd>
+        </dl>
+      </aside>
+    </div>
+    {next && <p class="next">Next: <a href={next.path}>{next.title} &rarr;</a></p>}
+  </main>
+</Base>

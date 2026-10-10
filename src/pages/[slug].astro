@@ -1,0 +1,20 @@
+---
+import { getCollection, render } from 'astro:content';
+import ProjectLayout from '../layouts/ProjectLayout.astro';
+import { projectRoutes } from '../lib/routes';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('projects');
+  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const index = projectRoutes.findIndex((r) => r.name === entry.id);
+if (index === -1) throw new Error(`No route registered for project "${entry.id}"`);
+
+const { Content } = await render(entry);
+---
+
+<ProjectLayout route={projectRoutes[index]} index={index} {...entry.data}>
+  <Content />
+</ProjectLayout>
