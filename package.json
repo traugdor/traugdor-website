@@ -1,0 +1,21 @@
+{
+  "name": "website",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "test": "vitest run tests/unit",
+    "test:build": "vitest run tests/build"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.10",
+    "astro": "^7.3.8",
+    "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "vitest": "^5.0.3"
+  }
+}
