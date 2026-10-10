@@ -1,0 +1,45 @@
+---
+import { allRoutes } from '../lib/routes';
+
+interface Props {
+  variant?: 'big' | 'slim';
+}
+
+const { variant = 'big' } = Astro.props;
+const inputId = `term-input-${variant}`;
+---
+
+<div class={`term term-${variant}`} data-terminal>
+  {
+    variant === 'big' && (
+      <div class="term-bar" aria-hidden="true">
+        <i /><i /><i />
+        <span>joeltrauger.com</span>
+      </div>
+    )
+  }
+  <div class="term-body">
+    <nav aria-label="Site menu">
+      <ul>
+        <li><a href="/">home</a> <span>back to the start</span></li>
+        {
+          allRoutes.map((route) => (
+            <li>
+              <a href={route.path}>{route.name}</a> <span>{route.blurb}</span>
+            </li>
+          ))
+        }
+        <li><a href="https://github.com/traugdor">github</a> <span>all repositories</span></li>
+      </ul>
+    </nav>
+    <div class="term-log" data-log role="log" aria-live="polite"></div>
+    <form hidden data-form>
+      <label for={inputId}>guest@jt:~$</label>
+      <input id={inputId} type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="type help" />
+    </form>
+  </div>
+</div>
+
+<script>
+  import '../scripts/terminal';
+</script>
