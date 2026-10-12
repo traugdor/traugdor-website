@@ -1,21 +1,34 @@
 import { parseCommand } from '../lib/commands';
 import { allRoutes, GITHUB_URL } from '../lib/routes';
 
-const NAME_WIDTH = 14;
-
-function menuText(): string {
-  const rows = [
-    ...allRoutes.map((r) => `${r.name.padEnd(NAME_WIDTH)}${r.blurb}`),
-    `${'home'.padEnd(NAME_WIDTH)}back to the start`,
-    `${'github'.padEnd(NAME_WIDTH)}all repositories`,
+/** Menu rows in the order the static menu shows them: home, every page, then GitHub. */
+function menuRows(): [name: string, blurb: string][] {
+  return [
+    ['home', 'back to the start'],
+    ...allRoutes.map((r): [string, string] => [r.name, r.blurb]),
+    ['github', 'all repositories'],
   ];
-  return rows.join('\n');
 }
 
 function print(log: HTMLElement, text: string): void {
   const line = document.createElement('div');
   line.textContent = text;
   log.append(line);
+  log.scrollTop = log.scrollHeight;
+}
+
+/** Prints the menu as two-column rows so a long blurb wraps inside its own column. */
+function printMenu(log: HTMLElement): void {
+  for (const [name, blurb] of menuRows()) {
+    const row = document.createElement('div');
+    row.className = 'term-row';
+    const nameCell = document.createElement('span');
+    nameCell.textContent = name;
+    const blurbCell = document.createElement('span');
+    blurbCell.textContent = blurb;
+    row.append(nameCell, blurbCell);
+    log.append(row);
+  }
   log.scrollTop = log.scrollHeight;
 }
 
@@ -37,7 +50,7 @@ function wire(term: HTMLElement): void {
       case 'empty':
         return;
       case 'list':
-        print(log, menuText());
+        printMenu(log);
         return;
       case 'navigate':
         print(log, `-> ${action.path}`);
