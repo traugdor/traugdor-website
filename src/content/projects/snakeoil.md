@@ -38,7 +38,7 @@ Even with SciPy, Python limited the filter. It still could not oscillate at maxi
 
 In the C++ plugin, the filter self-oscillates at maximum resonance, which is the sound I set out to make. As far as I can tell, it is the first free synth plugin of its kind that does that.
 
-[![The SnakeOil Synth plugin window with both oscillator levels at zero and the output meter showing signal.](../../assets/snakeoil/ui-whistling.png)](/images/snakeoil-ui-whistling.png)
-*SnakeOil Synth whistling. Both oscillator levels and the noise level are at zero, resonance is at 1.000 on the 24 dB slope, and the master meter still shows output: the filter is oscillating on its own. Click the image to see it full size.*
+[![The SnakeOil Synth plugin window with both oscillator levels at zero, an empty mod matrix, and the output meter showing signal.](../../assets/snakeoil/ui-whistling.png)](/images/snakeoil-ui-whistling.png)
+*SnakeOil Synth whistling. Both oscillator levels and the noise level are at zero, the mod matrix is empty, resonance is at 1.000 on the 24 dB slope, and the master meter still shows output: the filter is oscillating on its own. Click the image to see it full size.*
 
 The plugin builds on Windows, because that is what I use. It is licensed under AGPL-3.0, and anyone can build it from the source on my GitHub. I will upload a 1.0 release when I am satisfied with the plugin and how it functions. The Python version is still in the same repository as the reference the plugin was checked against.
