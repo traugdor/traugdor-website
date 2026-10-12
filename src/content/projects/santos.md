@@ -27,6 +27,9 @@ Once I left assembly and worked in C, which I know much better, things went fast
 - a system call interface on `INT 0x80`
 - a loader for 64-bit ELF programs stored on the FAT12 disk
 
+![SantOS boot output in the Bochs emulator, ending at the shell prompt.](../../assets/santos/bochs-boot.png)
+*SantOS booting in Bochs. The kernel passes its heap test, initializes the floppy controller and FAT12, loads the shell from disk, and drops to a prompt.*
+
 ## Userspace
 
 To have something to run on the kernel, I put programs on the disk image: a shell with piping, history, and scripts, a text editor called SEdit, and a small demo program. The AI wrote many of those programs so that I had something to test the kernel with. I spent a good deal of time tweaking SEdit because of that. I also started a prototype assembler, `sasm`, that turns x86 assembly into a program. I have not tested it in a while, so treat it as experimental.

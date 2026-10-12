@@ -176,6 +176,8 @@ a { color: inherit; }
 .prose { max-width: 640px; font-size: 18px; }
 .prose p { margin: 0 0 1.1em; }
 .prose h2 { font-size: 24px; margin: 1.6em 0 0.4em; }
+.prose p > img { display: block; max-width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 8px; }
+.prose p > img + em { display: block; margin-top: 8px; font: 14px/1.5 var(--sans); color: var(--muted); }
 .prose .gap {
   border: 1px dashed var(--muted);
   color: var(--muted);
