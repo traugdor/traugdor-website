@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { GITHUB_URL } from '../lib/routes';
+import { GITHUB_URL, KOFI_URL } from '../lib/routes';
 ---
 
 <Base title="Contact — Joel Trauger" description="Get in touch with Joel Trauger.">
@@ -15,6 +15,7 @@ import { GITHUB_URL } from '../lib/routes';
         <noscript>Email is revealed with JavaScript. Without it, reach me through <a href={GITHUB_URL}>my GitHub profile</a>.</noscript>
       </p>
       <p>The rest of my work is on <a href={GITHUB_URL}>GitHub</a>.</p>
+      <p>If you like what I build and want to support it, you can do that on <a href={KOFI_URL}>Ko-fi</a>.</p>
     </div>
   </main>
 </Base>

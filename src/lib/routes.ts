@@ -7,6 +7,7 @@ export interface Route {
 }
 
 export const GITHUB_URL = 'https://github.com/traugdor';
+export const KOFI_URL = 'https://ko-fi.com/quadmoonxiv';
 export const HOME_PATH = '/';
 
 /** Project routes in display order. The order drives numbering and "next project" links. */

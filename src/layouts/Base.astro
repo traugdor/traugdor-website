@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Terminal from '../components/Terminal.astro';
+import { GITHUB_URL, KOFI_URL } from '../lib/routes';
 
 interface Props {
   title: string;
@@ -31,7 +32,9 @@ const { title, description, slimTerminal = true } = Astro.props;
       <footer class="site-footer">
         <span>&copy; Joel Trauger</span>
         <span>
-          <a href="https://github.com/traugdor">See all repositories on GitHub</a>
+          <a href={GITHUB_URL}>See all repositories on GitHub</a>
+          &nbsp;·&nbsp;
+          <a href={KOFI_URL}>Support me on Ko-fi</a>
           &nbsp;·&nbsp;
           <a href="/contact">Contact</a>
         </span>
