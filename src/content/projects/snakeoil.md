@@ -1,6 +1,6 @@
 ---
 pitch: Chasing a sound I had heard about for years, then building the synth that makes it.
-status: Working VST3 plugin for Windows, built from source; 1.0 release planned
+status: Working VST3 plugin for Windows, built from source; 1.0 release planned; SnakeOil2 in development
 tech:
   - Python
   - SciPy
@@ -10,6 +10,8 @@ tech:
 repos:
   - label: SnakeOil-Synth
     url: https://github.com/traugdor/SnakeOil-Synth
+  - label: SnakeOil2 (in development)
+    url: https://github.com/traugdor/SnakeOil2
 ---
 
 ## The sound
@@ -42,3 +44,10 @@ In the C++ plugin, the filter self-oscillates at maximum resonance, which is the
 *SnakeOil Synth whistling. Both oscillator levels and the noise level are at zero, the mod matrix is empty, resonance is at 1.000 on the 24 dB slope, and the master meter still shows output: the filter is oscillating on its own. Click the image to see it full size.*
 
 The plugin builds on Windows, because that is what I use. It is licensed under AGPL-3.0, and anyone can build it from the source on my GitHub. I will upload a 1.0 release when I am satisfied with the plugin and how it functions. The Python version is still in the same repository as the reference the plugin was checked against.
+
+## SnakeOil2
+
+I'm already working on a second version. SnakeOil2 has twin dual-oscillator banks: every voice plays two complete oscillator setups at once, each with its own modulation, noise, filter, and envelopes, for a more layered sound. It is a Python prototype of a future VST3, it lives in its own repository, and it reuses a lot of code from the first SnakeOil Synth.
+
+[![A development build of SnakeOil2 with a patch called digital organ, showing two oscillator banks, A and B.](../../assets/snakeoil/snakeoil2-ui.png)](/images/snakeoil2-ui.png)
+*A development build of SnakeOil2 running a patch called "digital organ". Banks A and B each have their own oscillators, modulation, noise, filter, and envelopes, and the Mix, Detune, and Width controls blend them. Click the image to see it full size.*
