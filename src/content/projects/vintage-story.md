@@ -28,7 +28,7 @@ Smooth Stone Paths gives the vanilla stone path and stone path slab soft, natura
 
 It works automatically. There are no new blocks to craft or place, and it also updates paths you built before installing it. It is purely visual and does not change gameplay. It isn't compatible with mods that change the height of the stone path, such as Stonepathfull.
 
-Under the hood, the mod swaps the stone path for a small custom block class that hooks the client's chunk meshing and adds alpha-masked overlay pieces based on the eight surrounding blocks. Version 1.0.0 is on the [Vintage Story Mod DB](https://mods.vintagestory.at/smoothstonepaths) for game version 1.22.7.
+Under the hood, the mod swaps the stone path for a small custom block class that hooks the client's chunk meshing and adds alpha-masked overlay pieces based on the eight surrounding blocks. It is available on the [Vintage Story Mod DB](https://mods.vintagestory.at/smoothstonepaths).
 
 ## Remedy and Ruin (in development)
 
