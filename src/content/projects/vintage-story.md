@@ -20,7 +20,7 @@ I like playing Vintage Story. It reminds me of what Minecraft used to be, full o
 
 Expanded Stomach started as a personal health journey. It lets the player overeat, and overeating carries a risk: you can get fat in-game, which lowers your movement speed and makes the game harder.
 
-The more you overeat, the more your capacity grows. That makes it easier to keep overeating, and easy to eat too much food in one sitting and rob other players of a valuable resource. Over time the mod has grown to support other mods for the game, and the latest version has more than 3,300 downloads. It is available on the [Vintage Story Mod DB](https://mods.vintagestory.at/expandedstomach).
+The more you overeat, the more your capacity grows. That makes it easier to keep overeating, and easy to eat too much food in one sitting and rob other players of a valuable resource. Over time the mod has grown to support other mods for the game, and the latest version has more than 3,300 downloads. LadyWYT is a co-author of the mod, credited with the artwork and, alongside me, the ideas and testing. It is available on the [Vintage Story Mod DB](https://mods.vintagestory.at/expandedstomach).
 
 ## Smooth Stone Paths
 
