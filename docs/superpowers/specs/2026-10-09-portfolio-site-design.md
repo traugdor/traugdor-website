@@ -13,7 +13,7 @@ Joel is an AI-first developer with over a decade of experience doing it the hard
 - Astro (static output) with TypeScript.
 - Content pages written as Markdown, rendered through one shared layout.
 - Vanilla TypeScript for the terminal menu; no client framework.
-- System font stacks only. No external requests, analytics, or third-party scripts.
+- System font stacks only. The one third-party script is the Google Analytics (gtag.js) tag, included in production builds only through `src/components/Analytics.astro`.
 - Deployed by a GitHub Actions workflow on push to `main` using the official Pages actions.
 - Custom domain `joeltrauger.com` served at the site root, via a `CNAME` file in `public/`.
 
@@ -79,4 +79,4 @@ The contact address does not appear in the source or the built HTML. It is store
 
 ## Out of scope
 
-Blog, CMS, contact form, analytics, live GitHub data, listings for repositories outside the five stories.
+Blog, CMS, contact form, a consent banner, live GitHub data, listings for repositories outside the five stories.

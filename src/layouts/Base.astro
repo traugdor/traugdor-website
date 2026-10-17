@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Analytics from '../components/Analytics.astro';
 import Terminal from '../components/Terminal.astro';
 import { GITHUB_URL, KOFI_URL } from '../lib/routes';
 
@@ -20,6 +21,7 @@ const { title, description, slimTerminal = true } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <title>{title}</title>
+    {import.meta.env.PROD && <Analytics />}
   </head>
   <body>
     <div class="page">
